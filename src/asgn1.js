@@ -107,6 +107,7 @@ function click(ev) {
         point = new Triangle();
     }else{
         point = new Circle();
+        point.segments = g_selectedSegment;
     }
 
     // let point = new Point();
@@ -139,6 +140,7 @@ const CIRCLE = 2;
 let g_selectedColor=[1.0, 1.0, 1.0, 1.0];
 let g_selectedSize=5;
 let g_selectedType=POINT;
+let g_selectedSegment=20;
 
 function addActionsForHtmlUI(){
     document.getElementById('green').onclick = function() { g_selectedColor = [0.0, 1.0, 0.0, 1.0];};
